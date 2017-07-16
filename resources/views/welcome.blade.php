@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-sm-6">
-        <h1 align="center" style="font-family: 'Montserrat', sans-serif; font-size: 8em; padding-top: 110px">Matrix</h1>
+        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 8em; padding-top: 110px; padding-left: 80px">Matrix</h1>
     </div>
     <div class="col-sm-6" style="padding: 80px">
         <p style="font-size: 1.8em; font-weight:200; font-family: 'Montserrat', sans-serif; padding-bottom: 8px">Sign In</p>
