@@ -1,0 +1,9 @@
+<script type="text/javascript" src="{!! asset('js/app.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/bootstrap.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/ct-paper.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/bootstrap-datepicker.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/bootstrap-select.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/ct-paper-checkbox.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/ct-paper-radio.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/jquery-1.10.2.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/jquery-ui-1.10.4.custom.min.js') !!}"></script>
