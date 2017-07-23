@@ -9,6 +9,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{!! URL::asset('images/favicons/favicon-16x16.png') !!}"> -->
   <!-- Favicons Ends !-->
   @include('includes.styles')
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <script src="https://use.fontawesome.com/c9cc9ef658.js"></script>
 </head>
 <body  scroll="no" style="overflow: hidden">
   <noscript>Please enable JavaScript to continue.</noscript>

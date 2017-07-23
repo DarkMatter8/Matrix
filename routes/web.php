@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/ServiceLogin', 'AuthController@do_login');
+Route::post('/ServiceRegister', 'AuthController@do_register');
+
+Route::group(['namespace' => 'Player', 'prefix' => 'player'], function () {
+    
+    Route::get('/home', 'PlayerController@home');
+});

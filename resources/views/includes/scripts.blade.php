@@ -1,4 +1,5 @@
 <script type="text/javascript" src="{!! asset('js/app.js') !!}"></script>
+<script type="text/javascript" src="{!! asset('js/auth.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('js/bootstrap.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('js/ct-paper.js') !!}"></script>
 <script type="text/javascript" src="{!! asset('js/bootstrap-datepicker.js') !!}"></script>
