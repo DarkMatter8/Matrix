@@ -103,4 +103,9 @@ class AuthController extends Controller
         }
     }
 
+    public function do_logout(Request $request) {
+        Session::flush();
+        return redirect('/');
+    }
+
 }

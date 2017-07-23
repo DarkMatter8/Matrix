@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Player;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
 
-class PlayerController extends Controller
+
+class AdminController extends Controller
 {
-     public function home(Request $request){
+    public function home(Request $request){
 
         if(!Session::has('session')) {
             return redirect('/');
         }else{
-        	return view('player.home'); 
+        	return view('admin.home'); 
         }
     }
 }

@@ -17,8 +17,15 @@ Route::get('/', function () {
 
 Route::post('/ServiceLogin', 'AuthController@do_login');
 Route::post('/ServiceRegister', 'AuthController@do_register');
+Route::get('/logout', 'AuthController@do_logout');
 
 Route::group(['namespace' => 'Player', 'prefix' => 'player'], function () {
     
     Route::get('/home', 'PlayerController@home');
+});
+
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    
+    Route::get('/home', 'AdminController@home');
+    Route::resource('questions', 'QuestionController');
 });
