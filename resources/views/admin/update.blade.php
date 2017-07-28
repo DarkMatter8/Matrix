@@ -24,12 +24,22 @@
         <div class="form-group">
           <label for="answer">Answer:</label>
           <select class="form-control" name="answer" id="answer">
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
+            <option @if($question->answer == 'A') selected @endif>A</option>
+            <option @if($question->answer == 'B') selected @endif>B</option>
+            <option @if($question->answer == 'C') selected @endif>C</option>
+            <option @if($question->answer == 'D') selected @endif>D</option>
           </select>
-        </div>        
+        </div>
+
+        <div class="form-group">
+          <label for="genre">Answer:</label>
+          <select class="form-control" name="genre" id="genre">
+            <option @if($question->genre == 'Physics') selected @endif>Physics</option>
+            <option @if($question->genre == 'Chemistry') selected @endif>Chemistry</option>
+            <option @if($question->genre == 'Maths') selected @endif>Maths</option>
+          </select>
+        </div>
+
         <input type="hidden" name="_method" value="PUT">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="submit" id="add-button" class="btn btn-fill" style="padding-top:10px">Add</button>

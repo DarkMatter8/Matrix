@@ -31,6 +31,15 @@
           </select>
         </div>        
 
+        <div class="form-group">
+          <label for="genre">Answer:</label>
+          <select class="form-control" name="genre" id="genre">
+            <option>Physics</option>
+            <option>Chemistry</option>
+            <option>Maths</option>
+          </select>
+        </div>
+
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="submit" id="add-button" class="btn btn-fill" style="padding-top:10px">Add</button>
     </form>

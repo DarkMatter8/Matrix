@@ -45,7 +45,7 @@ class QuestionController extends Controller
             $newQuestion->option3 = $request->input('option3');
             $newQuestion->option4 = $request->input('option4');
             $newQuestion->answer = $request->input('answer');
-            $newQuestion->genre = 'physics';
+            $newQuestion->genre = $request->input('genre');
             $newQuestion->save();
 
             return redirect("/admin/home");
@@ -91,6 +91,7 @@ class QuestionController extends Controller
         $oldUpdate->option3 = $request->input('option3');
         $oldUpdate->option4 = $request->input('option4');
         $oldUpdate->answer = $request->input('answer');
+        $oldUpdate->genre = $request->input('genre');
         $oldUpdate->save();
 
         return redirect('admin/questions/');        

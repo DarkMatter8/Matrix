@@ -22,6 +22,10 @@ Route::get('/logout', 'AuthController@do_logout');
 Route::group(['namespace' => 'Player', 'prefix' => 'player'], function () {
     
     Route::get('/home', 'PlayerController@home');
+    Route::get('/physics', 'PlayerController@show_physics');
+    Route::get('/chemistry', 'PlayerController@show_chemistry');
+    Route::get('/maths', 'PlayerController@show_maths');
+    Route::post('/checkscore', 'PlayerController@check_score');
 });
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
