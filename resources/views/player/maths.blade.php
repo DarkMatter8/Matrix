@@ -28,7 +28,7 @@
 		    </div>
 		</div>
 	@endforeach
-
+	<input type="hidden" value="maths" name="genre">
 	<input type="hidden" value="{{ $count }}" name="count">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<div align="center"><button type="submit" class="btn btn-fill" style="padding-top:10px">Submit !</button></div>

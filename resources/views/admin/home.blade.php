@@ -28,4 +28,7 @@
 <div style="padding-top: 10px;" align="center">
   <a href="/admin/questions/create"><button class="btn btn-fill btn-lg">Add a Question !</button></a><br>
 </div>
+<div style="padding-top: 10px;" align="center">
+  <a href="/admin/results"><button class="btn btn-fill btn-lg">View Results !</button></a><br>
+</div>
 @stop

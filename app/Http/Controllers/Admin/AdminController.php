@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
-
+use App\Result;
 
 class AdminController extends Controller
 {
@@ -15,6 +15,16 @@ class AdminController extends Controller
             return redirect('/');
         }else{
         	return view('admin.home'); 
+        }
+    }
+
+    public function show_results(Request $request){
+
+        if(!Session::has('session')) {
+            return redirect('/');
+        }else{
+        	$results = Result::all();
+        	return view('admin.results')->with('results',$results); 
         }
     }
 }

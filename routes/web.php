@@ -32,4 +32,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     
     Route::get('/home', 'AdminController@home');
     Route::resource('questions', 'QuestionController');
+    Route::get('/results', 'AdminController@show_results');
 });

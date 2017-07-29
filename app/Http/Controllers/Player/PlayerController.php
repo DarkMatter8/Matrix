@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Session;
 use App\Question;
+use App\Result;
 
 class PlayerController extends Controller
 {
@@ -66,6 +67,19 @@ class PlayerController extends Controller
                     $score++;    
                 }
             }
+
+            $player_name = Session('session')->name;
+            $player_email = Session('session')->email;
+            $genre = $request->input('genre');
+
+            $result = new Result;
+            $result->player = $player_name;
+            $result->player_email = $player_email;
+            $result->genre = $genre;
+            $result->marks_obt = $score;
+            $result->total_mks = $count;
+            $result->save();
+
             return view('player.score')->with('score',$score)->with('count',$count);
 
         }
