@@ -50,7 +50,7 @@ $(document).ready(function(){
 //Register
 
    $("#RegisterForm").submit(function (e) {
-        $('#register-button').html('<i class="fa fa-circle-o-notch fa-spin"></i> Signing Up...');
+        $('#register-button').html('<i class="fa fa-circle-o-notch fa-spin"></i> Registering...');
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -71,26 +71,26 @@ $(document).ready(function(){
             success: function (response) {
                 data = jQuery.parseJSON(JSON.stringify(response));
                 if(data.status == 'fail') {
-                    $('#register-button').html('SIGN UP FOR FREE');
+                    $('#register-button').html('Register');
                     $("#error1").text(data.message);
                     $("#success").hide();
                     $("#error1").show();
                 }
                 else if(data.status == 'success') {
-                    $('#register-button').html('SIGN UP FOR FREE');
+                    $('#register-button').html('Register');
                     $("#success").text(data.message);
                     $("#error1").hide();
                     $("#success").show();
                 }
                 else {
-                    $('#login-button').html('SIGN UP FOR FREE');
+                    $('#register-button').html('Register');
                     $("#error1").text("Something went Wrong !");
                     $("#success").hide();
                     $("#error1").show();
                 }
             },
             error: function (data) {
-                $('#login-button').html('LOGIN');
+                $('#register-button').html('Register');
                 $("#error1").text("Something went Wrong !");
                 $("#success").hide();
                 $("error1").show();

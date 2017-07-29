@@ -15,9 +15,10 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $questions = Question::all();
-
-        return view('admin.list')->with('questions',$questions);   
+        $physics = Question::where('genre','physics')->get();
+        $chemistry = Question::where('genre','chemistry')->get();
+        $maths = Question::where('genre','maths')->get();
+        return view('admin.list')->with('physics',$physics)->with('chemistry',$chemistry)->with('maths',$maths);   
     }
 
     /**

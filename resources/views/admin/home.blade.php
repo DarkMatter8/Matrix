@@ -5,7 +5,7 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" style="color: #66615B; font-family: 'Montserrat', sans-serif;">Matrix-Admin</a>
+      <a class="navbar-brand" href="#" style="color: #66615B;">Matrix-Admin</a>
     </div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,12 +23,12 @@
 </nav>
 
 <div style="padding-top: 100px;" align="center">
-  <a href="/admin/questions/"><button class="btn btn-fill btn-lg">View all Questions !</button></a><br>
+  <a href="/admin/questions/" style="font-family: 'Roboto', sans-serif; font-weight:100;"><button class="btn btn-fill btn-lg">View all Questions !</button></a><br>
 </div>
 <div style="padding-top: 10px;" align="center">
-  <a href="/admin/questions/create"><button class="btn btn-fill btn-lg">Add a Question !</button></a><br>
+  <a href="/admin/questions/create" style="font-family: 'Roboto', sans-serif; font-weight:100;"><button class="btn btn-fill btn-lg">Add a Question !</button></a><br>
 </div>
 <div style="padding-top: 10px;" align="center">
-  <a href="/admin/results"><button class="btn btn-fill btn-lg">View Results !</button></a><br>
+  <a href="/admin/results" style="font-family: 'Roboto', sans-serif; font-weight:100;"><button class="btn btn-fill btn-lg">View Results !</button></a><br>
 </div>
 @stop

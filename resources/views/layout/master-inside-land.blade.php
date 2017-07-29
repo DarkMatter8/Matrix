@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   @include('includes.meta')
+  
   <title>@yield('title')</title>
   <!-- Favicons !-->
   <!-- <link rel="icon" type="image/png" sizes="64x64" href="{!! URL::asset('images/favicons/favicon-64x64.png') !!}">
@@ -10,7 +11,16 @@
   <!-- Favicons Ends !-->
   @include('includes.styles')
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
   <script src="https://use.fontawesome.com/c9cc9ef658.js"></script>
+  <style>
+
+  li,h1,h2,p,a,h3,button,span,div,i{
+    font-family: 'Roboto', sans-serif;
+    font-weight:100;
+  }
+
+  </style>
 </head>
 <body>
   <noscript>Please enable JavaScript to continue.</noscript>

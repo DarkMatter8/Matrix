@@ -2,6 +2,39 @@
 @section('title', 'Matrix')
 @section('content')
 
+<nav class="navbar navbar-ct-transparent" role="navigation-demo">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: #66615B; font-family: 'Montserrat', sans-serif;">Matrix-Admin</a>
+    </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navigation-example-2">
+      <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="/admin/home" style="color: #66615B;">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i> 
+                    Back to Home
+                </a>
+            </li>
+            <li>
+                <a href="/admin/questions/" style="color: #66615B;">
+                    <i class="fa fa-list" aria-hidden="true"></i>&nbsp; 
+                    View All Questions
+                </a>
+            </li>
+            <li>
+                <a href="/logout" style="color: #66615B;">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> 
+                    Logout
+                </a>
+            </li>
+       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-->
+</nav>
+
 <div style="padding-top: 40px;" class="col-sm-6 col-sm-offset-3">
     <h3>Add a Question</h3>
     <form action="/admin/questions/" method="POST" id="CreateForm">

@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-sm-6">
-        <h1 style="font-family: 'Montserrat', sans-serif; font-size: 8em; padding-top: 110px; padding-left: 140px">Matrix</h1>
+        <h1 style="font-family: 'Roboto', sans-serif; font-weight:100; font-size: 8em; padding-top: 110px; padding-left: 140px">Matrix</h1>
     </div>
     <div class="col-sm-6" style="padding: 80px">
         <div class="nav-tabs-navigation">

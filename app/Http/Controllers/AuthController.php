@@ -91,7 +91,7 @@ class AuthController extends Controller
                 if($newUser) {
                     return response()->json([
                     'status' => 'success',
-                    'message' => 'Registration Successful ! Confirmation link has been sent to Email !',
+                    'message' => 'Registration Successful !',
                 ]);
                 } else {
                     return response()->json([

@@ -3,9 +3,13 @@
 @section('content')
 
 <h1 align="center">Maths</h1>
+@if(count($questions)>=1)
 <div align="center" style="position: fixed; top:0; right:0; padding-right:100px; padding-top:50px;">
-	<p style="font-size: 30px;">Time Left</p><time id ="countdown" style="font-size: 30px;"></time></div>
+	<p style="font-size: 30px;">Time Left</p><time id ="countdown" style="font-size: 30px;"></time>
+</div>
+@endif
 <div style="padding: 100px; padding-top: 50px;">
+@if(count($questions)>=1)
 	<form method="POST" id="mathsform" name="mathsform" action="/player/checkscore">
 	@foreach($questions as $question)
 		<div>
@@ -33,6 +37,12 @@
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	<div align="center"><button type="submit" class="btn btn-fill" style="padding-top:10px">Submit !</button></div>
 	</form>
+@else
+	<h2 align="center">There are No Questions yet !</h2>
+	<div style="padding-top: 10px;" align="center">
+  <a href="/player/home/"><button class="btn btn-fill btn-lg">Back To Home !</button></a><br>
+</div>
+@endif
 </div>
 
 
