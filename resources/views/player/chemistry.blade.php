@@ -2,11 +2,11 @@
 @section('title', 'Home')
 @section('content')
 
-<h1 align="center">Physics</h1>
+<h1 align="center">Chemistry</h1>
 <div align="center" style="position: fixed; top:0; right:0; padding-right:100px; padding-top:50px;">
 	<p style="font-size: 30px;">Time Left</p><time id ="countdown" style="font-size: 30px;"></time></div>
 <div style="padding: 100px; padding-top: 50px;">
-	<form method="POST" id="physicsform" name="physicsform" action="/player/checkscore">
+	<form method="POST" id="chemistryform" name="chemistryform" action="/player/checkscore">
 	@foreach($questions as $question)
 		<div>
 			<h3>{{ $loop->iteration }}.{{ $question->question }}</h3>
@@ -60,7 +60,7 @@ function secondPassed() {
 
 		clearInterval(countdownTimer);
 
-		document.getElementById("physicsform").submit();
+		document.getElementById("chemistryform").submit();
 
 	} else {
 

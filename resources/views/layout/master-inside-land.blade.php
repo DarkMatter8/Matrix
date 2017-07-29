@@ -12,7 +12,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script src="https://use.fontawesome.com/c9cc9ef658.js"></script>
 </head>
-<body  scroll="no" style="overflow: hidden">
+<body>
   <noscript>Please enable JavaScript to continue.</noscript>
   
 
