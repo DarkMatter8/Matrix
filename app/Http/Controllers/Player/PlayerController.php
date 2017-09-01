@@ -68,17 +68,39 @@ class PlayerController extends Controller
                 }
             }
 
-            $player_name = Session('session')->name;
+            $team_name = Session('session')->name;
             $player_email = Session('session')->email;
             $genre = $request->input('genre');
 
-            $result = new Result;
-            $result->player = $player_name;
-            $result->player_email = $player_email;
-            $result->genre = $genre;
-            $result->marks_obt = $score;
-            $result->total_mks = $count;
-            $result->save();
+            $exists = Result::where('team',$team_name)->first();
+
+            if(!$exists){
+
+                $result = new Result;
+                $result->team = $team_name;
+                $result->player_email = $player_email;
+                if($genre == "physics"){
+                    $result->physics = $score;
+                }else if($genre == "chemistry"){
+                    $result ->chemistry = $score;
+                }else{
+                    $result->maths = $score;
+                }
+                $result->total = $score;
+                $result->save();
+            }else{
+                if($genre == "physics"){
+                    $exists->physics = $score;
+                    $exists->total = $score + ($exists->chemistry)+($exists->maths);            
+                }else if($genre == "chemistry"){
+                    $exists ->chemistry = $score;
+                    $exists->total = $score + ($exists->physics)+($exists->maths);
+                }else{
+                    $exists->maths = $score;
+                    $exists->total = $score + ($exists->chemistry)+($exists->physics);
+                }
+                $exists->save();
+            }
 
             return view('player.score')->with('score',$score)->with('count',$count);
 

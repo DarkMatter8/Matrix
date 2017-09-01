@@ -29,14 +29,29 @@
   </div><!-- /.container-->
 </nav>
 
-<div class="col-sm-6 col-sm-offset-3">
+<div align="center">
 <h2>Results</h2>
   <ul class="list-group">
-  	@foreach($results as $result)
-    	<li class="list-group-item"">{{ $result->player }} 
-      <p style="float: right;">{{ $result->genre }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $result->marks_obt }}/{{ $result->total_mks }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $result->created_at }}</p>
-      </li>
+    	<table>
+       <tr>
+         <th>Team Name</th>
+         <th>Physics</th>
+         <th>Chemistry</th>
+         <th>Maths</th>
+         <th>Total</th>
+         <th>Last Submitted At</th>
+       </tr>
+    @foreach($results as $result)
+       <tr>
+         <td>{{ $result->team }}</td>
+         <td>@if($result->physics == NULL)N.A.@else{{ $result->physics }}@endif</td>
+         <td>@if($result->chemistry == NULL)N.A.@else{{ $result->chemistry }}@endif</td>
+         <td>@if($result->maths == NULL)N.A.@else{{ $result->maths }}@endif</td>
+         <td>{{ $result->total }}</td>
+         <td>{{ $result->created_at }}</td>
+       </tr>
     @endforeach
+      </table>
   </ul>
 </div>
 @stop

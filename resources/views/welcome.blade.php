@@ -22,7 +22,7 @@
                 </div>
             <form action="/ServiceLogin" method="POST" id="LoginForm">
                 <div class="form-group">
-                    <input type="text" name="email" value="" placeholder="Email" class="form-control" id="email">
+                    <input type="text" name="name" value="" placeholder="Team Name" class="form-control" id="name">
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" id="password" value="" placeholder="Password" class="form-control">
@@ -41,7 +41,7 @@
                 </div>
                 <form action="/ServiceRegister" method="POST" id="RegisterForm">
                     <div class="form-group">
-                        <input type="text" name="name-register"  placeholder="First Name" class="form-control" id="name-register">
+                        <input type="text" name="name-register"  placeholder="Team Name" class="form-control" id="name-register">
                     </div>
                     <div class="form-group">
                         <input type="text" name="email-register" placeholder="Email" class="form-control" id="email-register">

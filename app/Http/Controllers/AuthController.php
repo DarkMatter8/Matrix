@@ -16,7 +16,7 @@ class AuthController extends Controller
             'required' => 'Enter your :attribute',
         ];
         $validator = Validator::make($request->all(), [
-            'email' => 'required | email | max:64',
+            'name' => 'required | max:64',
             'password' => 'required ',
         ], $messages);
         // If validator fails
@@ -27,7 +27,7 @@ class AuthController extends Controller
             ]);
         } else {
             // Check if user exists
-            $checkUser = User::where('email', $request->input('email'))->first();
+            $checkUser = User::where('name', $request->input('name'))->first();
             if($checkUser) {
                 if (Hash::check($request->input('password'), $checkUser->password)) {
                     Session::regenerate();

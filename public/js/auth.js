@@ -11,7 +11,7 @@ $(document).ready(function(){
         })
         e.preventDefault(); 
         var FORM_DATA = {
-            email: $('#email').val(),
+            name: $('#name').val(),
             password: $('#password').val(),
         }
         var POST_URL = "/ServiceLogin";

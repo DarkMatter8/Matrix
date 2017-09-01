@@ -20,6 +20,11 @@
     font-weight:100;
   }
 
+  th, td {
+    padding: 20px;
+    text-align: center;
+  }
+
   </style>
 </head>
 <body>
