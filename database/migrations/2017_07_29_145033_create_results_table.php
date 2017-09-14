@@ -17,10 +17,10 @@ class CreateResultsTable extends Migration
             $table->increments('id');
             $table->string('team');
             $table->string('player_email');
-            $table->integer('physics')->nullable();
-            $table->integer('chemistry')->nullable();
-            $table->integer('maths')->nullable();
-            $table->integer('total');
+            $table->string('physics')->default('NA');
+            $table->string('chemistry')->default('NA');
+            $table->string('maths')->default("NA");
+            $table->integer('total')->nullable();
             $table->timestamps();
         });
     }

@@ -76,11 +76,11 @@ class AuthController extends Controller
                 ]);
         } else {
             // Check if user exists
-            $checkUser = User::where('email', $request->input('email'))->get();
+            $checkUser = User::where('name', $request->input('name'))->get();
             if(count($checkUser) == 1) {
                 return response()->json([
                     'status' => 'fail',
-                    'message' => 'User with that email id already exists!',
+                    'message' => 'Team with that name already exists!',
                 ]);
             } else {
                 // Register that user
@@ -88,10 +88,14 @@ class AuthController extends Controller
                 $newUser = User::firstOrCreate(
                     ['email' => $request->input('email'), 'name' => $request->input('name'), 'password' => $password, 'role' => 'player']
                 );
+
                 if($newUser) {
+
+                    $user = User::where('email', $request->input('email'))->first();
+
                     return response()->json([
                     'status' => 'success',
-                    'message' => 'Registration Successful !',
+                    'message' => 'Registration Successful ! Your Team No. is '.$user->id,
                 ]);
                 } else {
                     return response()->json([

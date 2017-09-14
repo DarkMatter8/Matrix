@@ -23,7 +23,7 @@ class AdminController extends Controller
         if(!Session::has('session')) {
             return redirect('/');
         }else{
-        	$results = Result::all();
+        	$results = Result::orderBy('total', 'DESC')->get();
         	return view('admin.results')->with('results',$results); 
         }
     }

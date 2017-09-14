@@ -4,14 +4,16 @@
 
 <h1 align="center">Maths</h1>
 @if(count($questions)>=1)
-<div align="center" style="position: fixed; top:0; right:0; padding-right:100px; padding-top:50px;">
+<div align="center" style="position: fixed; top:0; right:0; padding-right:100px; padding-top:50px; background-color:#fff; z-index:1;">
 	<p style="font-size: 30px;">Time Left</p><time id ="countdown" style="font-size: 30px;"></time>
 </div>
 @endif
 <div style="padding: 100px; padding-top: 50px;">
 @if(count($questions)>=1)
 	<form method="POST" id="mathsform" name="mathsform" action="/player/checkscore">
+	<div>
 	@foreach($questions as $question)
+	<div class="col-sm-6">
 		<div>
 			<h3>{{ $loop->iteration }}.{{ $question->question }}</h3>
 			<ol type="A">
@@ -31,7 +33,9 @@
 		      </select>
 		    </div>
 		</div>
+		</div>
 	@endforeach
+	</div>
 	<input type="hidden" value="maths" name="genre">
 	<input type="hidden" value="{{ $count }}" name="count">
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -48,7 +52,7 @@
 
 <script>
       
-var seconds = 5400;
+var seconds = 600;
 
 function secondPassed() {
 

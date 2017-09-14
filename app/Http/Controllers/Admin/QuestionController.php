@@ -39,7 +39,15 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
+        $file = $request->file('file');
+        if($file){
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $destinationPath = 'media';
+        }
+        
             $newQuestion = new Question;
+            
             $newQuestion->question = $request->input('question');
             $newQuestion->option1 = $request->input('option1');
             $newQuestion->option2 = $request->input('option2');
@@ -47,8 +55,12 @@ class QuestionController extends Controller
             $newQuestion->option4 = $request->input('option4');
             $newQuestion->answer = $request->input('answer');
             $newQuestion->genre = $request->input('genre');
+            if($file){
+                $newQuestion->file = $destinationPath.'/'.$filename;
+                $file->move($destinationPath,$filename);
+            }
             $newQuestion->save();
-
+            
             return redirect("/admin/home");
     }
 

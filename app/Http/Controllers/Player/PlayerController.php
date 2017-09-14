@@ -15,7 +15,16 @@ class PlayerController extends Controller
         if(!Session::has('session')) {
             return redirect('/');
         }else{
-        	return view('player.home'); 
+            
+            $result = Result::where('team',Session('session')->name)->first();             
+
+            if($result){
+                $flag = 1;    
+            }else{
+                $flag = 0;
+            }
+
+        	return view('player.home')->with('result',$result)->with('flag',$flag); 
         }
     }
 
@@ -106,4 +115,5 @@ class PlayerController extends Controller
 
         }
     }
+
 }

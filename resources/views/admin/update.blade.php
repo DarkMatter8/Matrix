@@ -42,16 +42,16 @@
             <input type="text" name="question" value="{{ $question->question }}" placeholder="Question" class="form-control" id="question" required="true">
         </div>
         <div class="form-group">
-            <input type="text" name="option1" id="option1" value="{{ $question->option1 }}" placeholder="OptionA" class="form-control" required="true">
+            <input type="text" name="option1" id="option1" value="{{ $question->option1 }}" placeholder="OptionA" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option2" id="option2" value="{{ $question->option2 }}" placeholder="OptionB" class="form-control" required="true">
+            <input type="text" name="option2" id="option2" value="{{ $question->option2 }}" placeholder="OptionB" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option3" id="option3" value="{{ $question->option3 }}" placeholder="OptionC" class="form-control" required="true">
+            <input type="text" name="option3" id="option3" value="{{ $question->option3 }}" placeholder="OptionC" class="form-control">
         </div>
         <div class="form-group">
-            <input type="text" name="option4" id="option4" value="{{ $question->option4 }}" placeholder="OptionD" class="form-control" required="true">
+            <input type="text" name="option4" id="option4" value="{{ $question->option4 }}" placeholder="OptionD" class="form-control">
         </div>
 
         <div class="form-group">
@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group">
-          <label for="genre">Answer:</label>
+          <label for="genre">Category:</label>
           <select class="form-control" name="genre" id="genre">
             <option @if($question->genre == 'Physics') selected @endif>Physics</option>
             <option @if($question->genre == 'Chemistry') selected @endif>Chemistry</option>
