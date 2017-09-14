@@ -13,26 +13,26 @@
 	<form method="POST" id="mathsform" name="mathsform" action="/player/checkscore">
 	<div>
 	@foreach($questions as $question)
-	<div class="col-sm-6">
 		<div>
 			<h3>{{ $loop->iteration }}.{{ $question->question }}</h3>
+			@if($question->file)<img src="/{{ $question->file }}">@endif
 			<ol type="A">
-				<li>{{ $question->option1 }}</li>
-				<li>{{ $question->option2 }}</li>
-				<li>{{ $question->option3 }}</li>
-				<li>{{ $question->option4 }}</li>	
+				@if($question->option1)<li>{{ $question->option1 }}</li>@endif
+				@if($question->option2)<li>{{ $question->option2 }}</li>@endif
+				@if($question->option3)<li>{{ $question->option3 }}</li>@endif
+				@if($question->option4)<li>{{ $question->option4 }}</li>@endif	
 			</ol>
 			<div class="form-group">
 		      <label for="answer">Answer:</label>
 		      <input type="hidden" value="{{ $question->id }}" name="question-{{ $loop->iteration }}">
 		      <select class="form-control" name="answer-{{ $loop->iteration }}" id="answer-{{ $loop->iteration }}">
+		        <option disabled selected>Select Answer:</option>
 		        <option>A</option>
 		        <option>B</option>
 		        <option>C</option>
 		        <option>D</option>
 		      </select>
 		    </div>
-		</div>
 		</div>
 	@endforeach
 	</div>
