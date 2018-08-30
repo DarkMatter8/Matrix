@@ -7,7 +7,7 @@
         <h1 style="font-family: 'Roboto', sans-serif; font-weight:100;">Matrix</h1>
         <p>Matrix is an inter-collegiate PCM based quiz competition
 exclusively for first year engineering students organised by SIES GST, Nerul. It
-will be held on 16 th September, 2017 and is a full day event. Students in groups
+will be held on 7 th September, 2018 and is a full day event. Students in groups
 of 3 participate as a team in online, paper-pen, auditorium rounds and many
 more. Participants in a team should belong to the same college. Entries will be
 entertained only through publicity teams sent to the respective colleges and
@@ -57,7 +57,7 @@ awarded the ‘Best College Trophy’.</p>
                         <input type="text" name="email-register" placeholder="Email" class="form-control" id="email-register">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password-register" id="password-register" placeholder="Password" class="form-control">
+                        <input type="text" name="password-register" id="password-register" placeholder="Password" class="form-control">
                     </div>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <button type="submit" id="register-button" class="btn btn-fill" style="padding-top:10px" disabled>Register</button>
